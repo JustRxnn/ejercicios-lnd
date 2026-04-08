@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+</head>
+<body>
+ <div class="card">
+      <h2>Botón ocultar / mostrar</h2>
+      <p id="parrafo">Soy el párrafo que puedes ocultar y mostrar</p>
+      <button id="btn">Ocultar</button>
+    </div>
+     <script>
+    let visible = true;
+    const btn = document.getElementById("btn");
+    const parrafo = document.getElementById("parrafo");
+
+    btn.addEventListener("click", function() {
+      if (visible) {
+        parrafo.style.display = "none";
+        btn.innerHTML = "Mostrar";
+        visible = false;
+      } else {
+        parrafo.style.display = "block";
+        btn.innerHTML = "Ocultar";
+        visible = true;
+      }
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5 </title>
+</head>
+<body>
+      <div class="card">
+      <h2>Saludo personalizado</h2>
+      <input type="text" id="nombre" placeholder="Nombre..."/>
+      <button id="btn">Saludar</button>
+      <p id="resultado" class="resultado"></p>
+    </div>
+     <script>
+ const btn = document.getElementById("btn");
+    const input = document.getElementById("nombre");
+    const resultado = document.getElementById("resultado");
+
+    btn.addEventListener("click", function() {
+      const valor = input.value;
+      resultado.innerHTML = "Hola, " + valor + "¿Cómo estas el día de hoy?";
+    });
+        
+    </script>
+</body>
+</html>

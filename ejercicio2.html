@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <div class="card">
+      <div class="card-num">Ejercicio 2</div>
+      <h2>Cambiar el color del texto</h2>
+      <p id="texto">Este texto cambiará de color al pulsar el botón.</p>
+      <button id="btn2">Poner en rojo</button>
+    </div>
+
+    <script>
+ const btn = document.getElementById("btn");
+    const parrafo = document.getElementById("texto");
+
+    btn.addEventListener("click", function() {
+      parrafo.style.color = "red";
+    });
+    </script>
+</body>
+</html>
