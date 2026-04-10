@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+          <div class="card">
+      <h2>Cambiar imagen al hacer clic</h2>
+      <img id="foto" src="https://picsum.photos/400/160?random=1" alt="Imagen aleatoria"/>
+      <button id="btn">Cambiar imagen</button>
+    </div>
+    
+     <script>
+    const btn8 = document.getElementById("btn8");
+    const img = document.getElementById("foto");
+    let imgNum = 1;
+
+    btn8.addEventListener("click", function() {
+      imgNum = imgNum + 1;
+      img.src = "https://picsum.photos/400/160?random=" + imgNum;
+    });
+        
+    </script>
+</body>
+</html>

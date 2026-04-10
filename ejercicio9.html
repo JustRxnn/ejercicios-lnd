@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejerecicio 9</title>
+</head>
+<body>
+    <div class="card">
+      <h2>Lista de tareas sencilla</h2>
+      <div class="row">
+        <input type="text" id="inputTarea" placeholder="Nueva tarea..." style="margin-bottom:0; flex:1"/>
+        <button id="btn9">Añadir</button>
+      </div>
+      <ul id="lista"></ul>
+    </div>
+
+     <script>
+const btn = document.getElementById("btn9");
+    const inputTarea = document.getElementById("inputTarea");
+    const lista = document.getElementById("lista");
+
+    btn.addEventListener("click", function() {
+      const texto = inputTarea.value;
+      if (texto !== "") {
+        lista.innerHTML = lista.innerHTML + "<li>" + texto + "</li>";
+        inputTarea.value = "";
+        inputTarea.focus();
+      }
+    });
+
+    inputTarea.addEventListener("keydown", function(e) {
+      if (e.key === "Enter") btn.click();
+    });
+
+        
+    </script>
+</body>
+</html>
